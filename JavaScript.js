@@ -7,7 +7,7 @@ const firebaseConfig = {
     apiKey: "AIzaSyB-eE_Edm7gd_nFmBQfP2V7OqBIJntZ4IQ",
     authDomain: "taste-haven-6c92d.firebaseapp.com",
     projectId: "taste-haven-6c92d",
-    storageBucket: "taste-haven-6c92d.firebasestorage.app",
+    storageBucket: "taste-haven-6c92d.appspot.com",
     messagingSenderId: "999156594491",
     appId: "1:999156594491:web:345947308aeac9ab77291e",
     measurementId: "G-YLE10M2H9S"
@@ -113,3 +113,4 @@ async function loadMenu() {
         menuContainer.innerHTML = "<p>Error loading menu.</p>";
     }
 }
+
