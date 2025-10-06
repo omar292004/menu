@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Haven | Menu</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="taste haven.jpeg" alt="Logo" class="logo">
+            <h1><a href="add.html" style="color:white; text-decoration:none;">Taste Haven</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Our Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="buttons">
+        <button data-category="all" class="active">All</button>
+        <button data-category="breakfast">Breakfast</button>
+        <button data-category="dinner">Dinner</button>
+        <button data-category="desserts">Desserts</button>
+        <button data-category="hot drinks">Hot Drinks</button>
+        <button data-category="cold drinks">Cold Drinks</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search for dishes...">
+
+    <div id="menuContainer"></div>
+
+    <footer>
+        <p>&copy; 2025 Taste Haven | Developed and Designed by Omar Hossam</p>
+        <div class="social">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">X</a>
+        </div>
+    </footer>
+
+    <script type="module" src="JavaScript.js"></script>
+</body>
+</html>

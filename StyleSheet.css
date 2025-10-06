@@ -1,0 +1,283 @@
+﻿/* ====== RESET & BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid #ffb400;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeInDown 0.6s ease;
+}
+
+    header .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    header h1 {
+        color: #ffb400;
+    }
+
+    header nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+        header nav a:hover {
+            color: #ffb400;
+            transform: scale(1.1);
+        }
+
+/* Hidden owner link */
+nav a.hidden-link {
+    opacity: 0;
+    cursor: none;
+    pointer-events: none;
+}
+
+/* ====== MENU PAGE ====== */
+.buttons {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 0.8s ease;
+}
+
+    .buttons button {
+        margin: 5px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: #1e1e2f;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+        .buttons button:hover {
+            background: #ffb400;
+            transform: scale(1.05);
+        }
+
+        .buttons button.active {
+            background: #ffb400;
+        }
+
+#search {
+    display: block;
+    margin: 10px auto 20px auto;
+    width: 80%;
+    max-width: 400px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ffb400;
+    background: #111;
+    color: white;
+}
+
+#menuContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    animation: fadeInUp 0.6s ease;
+}
+
+    .menu-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #ffb400;
+    }
+
+/* ====== ADD PAGE ====== */
+#login-section, #add-section {
+    text-align: center;
+    margin-top: 80px;
+    animation: fadeIn 0.8s ease;
+}
+
+    #login-section input,
+    #add-section input,
+    #add-section select {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #ffb400;
+        background: #111;
+        color: white;
+    }
+
+button, #loginBtn {
+    background: #ffb400;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    button:hover, #loginBtn:hover {
+        background: #ff9500;
+        transform: scale(1.05);
+    }
+
+/* ====== CONTACT PAGE ====== */
+.contact-container {
+    text-align: center;
+    padding: 60px 20px;
+    flex: 1;
+    animation: fadeIn 0.8s ease;
+}
+
+    .contact-container h2 {
+        color: #ffb400;
+        margin-bottom: 30px;
+    }
+
+    .contact-container button {
+        background: #ffb400;
+        color: #000;
+        border: none;
+        padding: 12px 25px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .contact-container button:hover {
+            background: #ff9500;
+            transform: scale(1.05);
+        }
+
+/* ====== ABOUT PAGE ====== */
+.about-container {
+    text-align: center;
+    padding: 60px 20px;
+    line-height: 1.7;
+    flex: 1;
+    animation: fadeIn 1s ease;
+}
+
+    .about-container h2 {
+        color: #ffb400;
+        margin-bottom: 20px;
+    }
+
+/* ====== FOOTER ====== */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 2px solid #ffb400;
+    margin-top: auto;
+    animation: fadeInUp 0.7s ease;
+}
+
+    footer a {
+        color: #ffb400;
+        text-decoration: none;
+        margin: 0 8px;
+        transition: color 0.3s;
+    }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    #menuContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+}

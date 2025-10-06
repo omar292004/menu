@@ -1,0 +1,68 @@
+﻿<!DOCTYPE Html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Dish | Taste Haven</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+    <style>
+
+        #add-section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="taste haven.jpeg" alt="Taste Haven Logo" class="logo">
+            <h1>Taste Haven</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Owner Login -->
+    <section id="login-section">
+        <h2>Owner Login</h2>
+        <input type="text" id="ownerId" placeholder="Enter ID">
+        <input type="password" id="ownerPass" placeholder="Enter Password">
+        <button id="loginBtn">Login</button>
+    </section>
+
+    <!-- Add Dish Form (Hidden until login) -->
+    <section id="add-section">
+        <h2>Add New Dish</h2>
+        <form id="addDishForm">
+            <input type="text" id="dishName" placeholder="Dish Name" required>
+            <input type="text" id="dishPrice" placeholder="Price (EGP)" required>
+            <input type="text" id="dishIngredients" placeholder="Ingredients" required>
+            <select id="dishCategory" required>
+                <option value="">Select Category</option>
+                <option value="dinner">Dinner</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="desserts">Desserts</option>
+                <option value="hot drinks">Hot Drinks</option>
+                <option value="cold drinks">Cold Drinks</option>
+            </select>
+            <button type="submit">Add Dish</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Taste Haven | All Rights Reserved</p>
+        <p>Developed and Designed by <strong>Omar Hossam</strong></p>
+    </footer>
+
+    <!-- External JS at END -->
+    <script type="module" src="JavaScript.js"></script>
+
+</body>
+</html>
